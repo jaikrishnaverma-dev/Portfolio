@@ -1,0 +1,53 @@
+.hero_wrapper {
+  width: inherit;
+  margin: 0px 10px;
+  display: flex;
+}
+.hero_half {
+  width: 50%;
+  padding: 15px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  min-height: 500px;
+}
+.hero--left {
+  align-items: center;
+  justify-content: end;
+}
+
+.back_cover {
+  min-width: 50%;
+  border-radius: 0% 0px 60% 0px;
+  min-height: 300px;
+  background-color: yellow;
+  position: relative;
+  animation: mymove 5s infinite;
+}
+.back_cover img {
+  position: absolute;
+  top: -50%;
+  left: 0;
+  max-width: 300px;
+  max-height: 500px;
+}
+@keyframes mymove {
+  from {
+    left: 0px;
+  }
+  to {
+    left: 20%;
+  }
+}
+.hero--right {
+  line-height: 2;
+  font-size: 22px;
+}
+.hero--right span {
+  font-size: 18px;
+  font-weight: 200;
+}
+.hero--right span i {
+  margin-right: 20px;
+  font-size: 35px;
+}
