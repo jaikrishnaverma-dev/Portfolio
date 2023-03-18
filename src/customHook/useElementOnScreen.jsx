@@ -1,4 +1,4 @@
-import React, { useEffect, useRef, useState } from 'react'
+import  { useEffect, useRef, useState } from 'react'
 
 const useElementOnScreen = (options) => {
       const containerRef = useRef(null);
