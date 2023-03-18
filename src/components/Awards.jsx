@@ -3,7 +3,7 @@ import { portfolio } from '../centralized_data/datas'
 import useElementOnScreen from '../customHook/useElementOnScreen'
 
 const Awards = () => {
-    const [containerRef,isVisible]=useElementOnScreen({
+    const [containerRef]=useElementOnScreen({
         root:null,
         rootMargin:'0px',
         threshold:1.0
