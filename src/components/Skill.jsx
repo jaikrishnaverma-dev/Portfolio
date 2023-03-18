@@ -2,7 +2,7 @@ import React from "react";
 import useElementOnScreen from "../customHook/useElementOnScreen";
 import "./Skill.css";
 import Slider from "react-slick";
-import { skills } from "../centralized_data/datas";
+import { portfolio } from "../centralized_data/datas";
 const Skill = () => {
 const [containerRef,isVisible]=useElementOnScreen({
     root:null,
@@ -15,7 +15,25 @@ const settings = {
     infinite: true,
     speed: 500,
     slidesToShow: 3,
-    slidesToScroll: 1
+    slidesToScroll: 1,   
+    autoplay: true,
+    autoplaySpeed: 2000,
+    responsive: [
+      {
+        breakpoint: 600,
+        settings: {
+          slidesToShow: 2,
+          slidesToScroll: 2,
+        }
+      },
+      {
+        breakpoint: 480,
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1
+        }
+      }
+    ]
   };
 
   
@@ -26,7 +44,7 @@ const settings = {
       <p className="sub_title">Here are Some of my skills</p>
         <div className={`square ${isVisible?'square-animation ':''}`}>
         <Slider {...settings}>
-      { skills.map(skill=>
+      { portfolio.skills.map(skill=>
     <div className="skill_card_wrapper">
          <div className="skill_cards">
             <img src={skill.image} alt="" />

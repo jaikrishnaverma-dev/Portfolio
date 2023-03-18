@@ -32,12 +32,15 @@
   max-height: 500px;
 }
 @keyframes mymove {
-  from {
+  0% {
     left: 0px;
   }
-  to {
+  50% {
     left: 20%;
   }
+ 100%{
+    left: 0px
+ }
 }
 .hero--right {
   line-height: 2;
